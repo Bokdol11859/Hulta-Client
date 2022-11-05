@@ -2,8 +2,8 @@ import TextInput from "@components/atoms/TextInput";
 import Card from "@components/Card";
 import styled from "@emotion/styled";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
-import React, { LegacyRef, useRef, useState } from "react";
-import { colors } from "src/constants/colors";
+import React, { useRef, useState } from "react";
+import { colors } from "@constants/colors";
 
 type Props = {};
 
@@ -11,7 +11,7 @@ const Temp = Array(50)
   .fill("")
   .map((arr) => ({
     image: "https://picsum.photos/200/300",
-    title: "테스트입니다",
+    title: "자기개발 책",
     author: "복돌복돌",
   }));
 
@@ -31,9 +31,7 @@ const Search = (props: Props) => {
         }
         inputStyle={{ fontSize: "1.1rem" }}
         wrapperStyle={{
-          width: "90%",
           maxWidth: "450px",
-          margin: "auto",
           position: "fixed",
           backgroundColor: "white",
         }}
@@ -61,7 +59,6 @@ const SearchContainer = styled.div`
 
 const SearchTitle = styled.h1`
   padding: 1rem 0;
-  margin-top: 4rem;
   width: 100%;
   text-align: center;
 `;
@@ -72,9 +69,9 @@ const SearchResult = styled.div`
   align-items: center;
   align-content: flex-start;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   flex-wrap: wrap;
-  padding-bottom: 7rem;
+  padding-bottom: 2rem;
 `;
 
 export default Search;
